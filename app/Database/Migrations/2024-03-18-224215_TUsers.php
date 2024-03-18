@@ -31,7 +31,6 @@ class TUsers extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '20',
             ],
-            ,
             'admin' => [
                 'type'       => 'INT',
                 'constraint' => '1',
