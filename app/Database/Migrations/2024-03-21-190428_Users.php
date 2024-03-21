@@ -17,19 +17,19 @@ class Users extends Migration
             ],
             'name' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '50',
+                'constraint' => '255',
             ],
             'email' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '30',
+                'constraint' => '255',
             ],
             'login' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '20',
+                'constraint' => '255',
             ],
             'pwd' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '20',
+                'constraint' => '255',
             ],
             'admin' => [
                 'type'       => 'INT',
