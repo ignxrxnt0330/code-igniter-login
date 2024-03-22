@@ -6,19 +6,24 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <title>Login</title>
+    <title>Sign up</title>
   </head>
   <body>
 
     <div class="container d-flex justify-content-center align-items-center" style="height: 300px;">
 
-        <form action="<?php echo base_url('/login') ?>" method="POST" class="row g-3 col-md-6">
-            <div class="col-md-12">
-                <label class="form-label" for="email">
+        <form action="<?php echo base_url('/dosignup') ?>" method="POST" class="row g-3 col-md-6">
+        <div class="col-md-12">
+            <label class="form-label" for="name">
+                Name
+            </label>
+            <input type="text" id="name" name="name" class="form-control" required placeholder="Asdasd" />
+        </div>
+        <div class="col-md-12">
+            <label class="form-label" for="email">
                     Email
             </label>
             <input type="text" id="email" name="email" class="form-control" required placeholder="asd@asd.asd"/>
-            
         </div>
         <div class="col-md-12">
             <label class="form-label" for="pwd">
@@ -27,10 +32,8 @@
             <input type="password" id="pwd" name="pwd" class="form-control" required placeholder="pwd" />
             
         </div>
-
         <div class="col-md-12 text-center">
-            <button type="submit" class="btn btn-primary">Login</button>
-            <a href="<?= base_url('/signup') ?>" class="btn btn-outline-primary">Sign up</a>
+            <button type="submit" class="btn btn-primary">Sign up</button>
         </div>
     </form>
 

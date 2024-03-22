@@ -7,4 +7,9 @@
             $user->where($data);
             return $user->get()->getResultArray();
         }
+
+        public function insertUser($data){
+            $user = $this->db->table('users');
+            $user->insert($data);
+        }
     }

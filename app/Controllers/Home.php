@@ -6,13 +6,16 @@ class Home extends BaseController
 {
     public function index()
     {
-        $msg = session('message');
-        return view('login',['message' => $msg]);
+        return view('login');
     }
 
     public function homePage()
     {
         return view('homePage');
+    }
+
+    public function signup(){
+        return view('signup');
     }
 
     public function login(){// retrieves user data using POST
@@ -37,4 +40,28 @@ class Home extends BaseController
         }
         return redirect()->to(base_url('/'))->with('error','User not found');
     }
+
+    public function exit(){
+        $session = session();
+        $session->destroy();
+        return redirect()->to(base_url('/'));
+        // destroy session and redirect to login
+    }
+
+    public function dosignup(){
+        $name = $this->request->getPost('name');
+        $email = $this->request->getPost('email');
+        $pwd = $this->request->getPost('pwd');
+        $user = new User();
+
+        $data = [   
+            'name' => $name,
+            'email' => $email,
+            'pwd' => $pwd,
+            'admin' => 0
+        ];
+
+        $user->insert($data);
+    }
+
 }
